@@ -1,4 +1,21 @@
 /* =============================================
+   THEME TOGGLE
+============================================= */
+const html         = document.documentElement;
+const themeToggle  = document.getElementById('themeToggle');
+
+// Apply saved preference (default: dark)
+html.setAttribute('data-theme', localStorage.getItem('theme') || 'dark');
+
+themeToggle.addEventListener('click', () => {
+  const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+  html.classList.add('theme-transitioning');
+  html.setAttribute('data-theme', next);
+  localStorage.setItem('theme', next);
+  setTimeout(() => html.classList.remove('theme-transitioning'), 380);
+});
+
+/* =============================================
    NAV: scroll + blur + active links
 ============================================= */
 const nav     = document.getElementById('nav');

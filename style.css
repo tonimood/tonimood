@@ -24,6 +24,48 @@
   --nav-h:        70px;
   --container:    1200px;
   --ease:         cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+  /* Theme-contextual values */
+  --nav-scrolled-bg:  rgba(9, 9, 11, 0.88);
+  --hero-grid-color:  rgba(255,255,255,0.028);
+  --mobile-nav-bg:    rgba(9, 9, 11, 0.97);
+  --svg-struct-color: rgba(255,255,255,1);
+  --initials-color:   rgba(255,255,255,0.10);
+}
+
+/* ===========================================
+   LIGHT THEME
+=========================================== */
+[data-theme="light"] {
+  --bg:           #F3F4F8;
+  --card:         #FFFFFF;
+  --card-2:       #EEEEF5;
+  --border:       #E2E2EC;
+  --border-2:     #C8C8D6;
+  --text-1:       #0D0D14;
+  --text-2:       #5E5E78;
+  --text-3:       #9898B2;
+  --gold-light:   #C09400;
+  --gold-bright:  #D4A820;
+  --gold-dim:     rgba(154,118,0,0.09);
+  --gold-glow:    rgba(154,118,0,0.22);
+
+  --nav-scrolled-bg:  rgba(243, 244, 248, 0.92);
+  --hero-grid-color:  rgba(160,160,185,0.28);
+  --mobile-nav-bg:    rgba(243, 244, 248, 0.97);
+  --svg-struct-color: rgba(13, 13, 20, 1);
+  --initials-color:   rgba(0, 0, 0, 0.07);
+}
+
+/* Smooth theme transition */
+html.theme-transitioning *,
+html.theme-transitioning *::before,
+html.theme-transitioning *::after {
+  transition:
+    background-color 0.35s ease,
+    border-color 0.35s ease,
+    color 0.35s ease,
+    box-shadow 0.35s ease !important;
 }
 
 html { scroll-behavior: smooth; font-size: 16px; }
@@ -151,6 +193,39 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .btn--full { width: 100%; padding: 15px 26px; font-size: 15px; }
 
 /* ===========================================
+   THEME TOGGLE
+=========================================== */
+.theme-toggle {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--r-sm);
+  border: 1px solid var(--border);
+  background: var(--card);
+  color: var(--text-2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all 0.2s;
+  padding: 0;
+}
+.theme-toggle:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+  background: var(--gold-dim);
+}
+.theme-toggle svg { width: 16px; height: 16px; pointer-events: none; }
+
+/* dark = show sun (to switch to light); light = show moon (to switch to dark) */
+[data-theme="dark"]  .icon-moon { display: none; }
+[data-theme="dark"]  .icon-sun  { display: block; }
+[data-theme="light"] .icon-sun  { display: none; }
+[data-theme="light"] .icon-moon { display: block; }
+
+/* SVG structural lines: override presentation attribute with CSS var */
+.hero__shape [stroke="#FFFFFF"] { stroke: var(--svg-struct-color); }
+
+/* ===========================================
    NAV
 =========================================== */
 .nav {
@@ -162,7 +237,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 }
 
 .nav.scrolled {
-  background: rgba(9, 9, 11, 0.88);
+  background: var(--nav-scrolled-bg);
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
   border-bottom: 1px solid var(--border);
@@ -255,8 +330,8 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   position: absolute;
   inset: 0;
   background-image:
-    linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+    linear-gradient(var(--hero-grid-color) 1px, transparent 1px),
+    linear-gradient(90deg, var(--hero-grid-color) 1px, transparent 1px);
   background-size: 56px 56px;
 }
 
@@ -632,7 +707,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .about__initials {
   font-size: 80px;
   font-weight: 900;
-  color: rgba(255,255,255,0.1);
+  color: var(--initials-color);
   letter-spacing: -0.04em;
   position: relative;
   z-index: 1;
@@ -924,7 +999,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   cursor: pointer;
 }
 .form-select option {
-  background: #18181E;
+  background: var(--card-2);
   color: var(--text-1);
 }
 
@@ -1075,7 +1150,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
     position: fixed;
     top: var(--nav-h);
     left: 0; right: 0;
-    background: rgba(9, 9, 11, 0.97);
+    background: var(--mobile-nav-bg);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     flex-direction: column;
