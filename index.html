@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Proper Develop — Business Architecture & Growth</title>
+  <meta name="description" content="I build strategies, systems and teams that turn companies into market leaders.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- =========================================
+       NAVIGATION
+  ========================================= -->
+  <nav class="nav" id="nav">
+    <div class="container nav__inner">
+      <a href="#home" class="nav__logo">Proper<span>Develop</span></a>
+      <ul class="nav__links" id="navLinks">
+        <li><a href="#services" class="nav__link">Services</a></li>
+        <li><a href="#cases" class="nav__link">Cases</a></li>
+        <li><a href="#testimonials" class="nav__link">Testimonials</a></li>
+        <li><a href="#about" class="nav__link">About</a></li>
+        <li><a href="#contact" class="nav__link">Contact</a></li>
+      </ul>
+      <a href="#contact" class="btn btn--nav">Book a Call</a>
+      <button class="nav__burger" id="burger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- =========================================
+       HERO
+  ========================================= -->
+  <section class="hero" id="home">
+    <div class="hero__bg"></div>
+    <div class="container hero__inner">
+      <div class="hero__content">
+        <div class="hero__badge">Business Architect &amp; Growth Strategist</div>
+        <h1 class="hero__title">The New<br><em>Architecture</em><br>of Business</h1>
+        <p class="hero__sub">I build strategies, systems and teams that turn companies into market leaders. 12 years. 40+ companies. Real results.</p>
+        <div class="hero__actions">
+          <a href="#contact" class="btn btn--primary">Book a Free Call</a>
+          <a href="#services" class="btn btn--ghost">See How It Works →</a>
+        </div>
+      </div>
+      <div class="hero__visual" aria-hidden="true">
+        <svg class="hero__shape" viewBox="0 0 440 440" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <radialGradient id="gGlow" cx="50%" cy="50%" r="50%">
+              <stop offset="0%"   stop-color="#deaa00" stop-opacity="0.14"/>
+              <stop offset="100%" stop-color="#deaa00" stop-opacity="0"/>
+            </radialGradient>
+          </defs>
+
+          <!-- Ambient warm glow -->
+          <circle cx="220" cy="220" r="170" fill="url(#gGlow)"/>
+
+          <!-- ── DARK: structural skeleton ── -->
+          <!-- Outer dashed frame -->
+          <rect x="52" y="52" width="336" height="336"
+                stroke="#0D0D14" stroke-opacity="0.16" stroke-width="1"
+                stroke-dasharray="5 9" fill="none"/>
+          <!-- Inner solid frame -->
+          <rect x="96" y="96" width="248" height="248"
+                stroke="#0D0D14" stroke-opacity="0.11" stroke-width="1" fill="none"/>
+          <!-- Diagonal cross (very faint) -->
+          <line x1="96"  y1="96"  x2="344" y2="344" stroke="#0D0D14" stroke-opacity="0.07" stroke-width="1"/>
+          <line x1="344" y1="96"  x2="96"  y2="344" stroke="#0D0D14" stroke-opacity="0.07" stroke-width="1"/>
+          <!-- Outer dashed ring -->
+          <circle cx="220" cy="220" r="115"
+                  stroke="#0D0D14" stroke-opacity="0.09" stroke-width="1"
+                  stroke-dasharray="3 10" fill="none"/>
+          <!-- Tight inner ring -->
+          <circle cx="220" cy="220" r="17"
+                  stroke="#0D0D14" stroke-opacity="0.22" stroke-width="2" fill="none"/>
+
+          <!-- ── DARK: corner tick markers ── -->
+          <line x1="96"  y1="52"  x2="96"  y2="66"  stroke="#0D0D14" stroke-opacity="0.32" stroke-width="1.5"/>
+          <line x1="344" y1="52"  x2="344" y2="66"  stroke="#0D0D14" stroke-opacity="0.32" stroke-width="1.5"/>
+          <line x1="96"  y1="374" x2="96"  y2="388" stroke="#0D0D14" stroke-opacity="0.32" stroke-width="1.5"/>
+          <line x1="344" y1="374" x2="344" y2="388" stroke="#0D0D14" stroke-opacity="0.32" stroke-width="1.5"/>
+          <line x1="52"  y1="96"  x2="66"  y2="96"  stroke="#0D0D14" stroke-opacity="0.32" stroke-width="1.5"/>
+          <line x1="52"  y1="344" x2="66"  y2="344" stroke="#0D0D14" stroke-opacity="0.32" stroke-width="1.5"/>
+          <line x1="374" y1="96"  x2="388" y2="96"  stroke="#0D0D14" stroke-opacity="0.32" stroke-width="1.5"/>
+          <line x1="374" y1="344" x2="388" y2="344" stroke="#0D0D14" stroke-opacity="0.32" stroke-width="1.5"/>
+
+          <!-- ── GOLD: main crosshair axes ── -->
+          <line x1="52"  y1="220" x2="388" y2="220" stroke="#deaa00" stroke-opacity="0.65" stroke-width="1.5"/>
+          <line x1="220" y1="52"  x2="220" y2="388" stroke="#deaa00" stroke-opacity="0.65" stroke-width="1.5"/>
+
+          <!-- ── GOLD: precision tick marks on axes ── -->
+          <!-- horizontal ticks -->
+          <line x1="96"  y1="213" x2="96"  y2="227" stroke="#deaa00" stroke-opacity="0.8"  stroke-width="2"/>
+          <line x1="160" y1="216" x2="160" y2="224" stroke="#deaa00" stroke-opacity="0.45" stroke-width="1"/>
+          <line x1="280" y1="216" x2="280" y2="224" stroke="#deaa00" stroke-opacity="0.45" stroke-width="1"/>
+          <line x1="344" y1="213" x2="344" y2="227" stroke="#deaa00" stroke-opacity="0.8"  stroke-width="2"/>
+          <!-- vertical ticks -->
+          <line x1="213" y1="96"  x2="227" y2="96"  stroke="#deaa00" stroke-opacity="0.8"  stroke-width="2"/>
+          <line x1="216" y1="160" x2="224" y2="160" stroke="#deaa00" stroke-opacity="0.45" stroke-width="1"/>
+          <line x1="216" y1="280" x2="224" y2="280" stroke="#deaa00" stroke-opacity="0.45" stroke-width="1"/>
+          <line x1="213" y1="344" x2="227" y2="344" stroke="#deaa00" stroke-opacity="0.8"  stroke-width="2"/>
+
+          <!-- ── GOLD: concentric circles ── -->
+          <!-- Outer measurement ring -->
+          <circle cx="220" cy="220" r="82"
+                  stroke="#deaa00" stroke-opacity="0.28" stroke-width="1.5" fill="none"/>
+          <!-- Main focus ring (bright) -->
+          <circle cx="220" cy="220" r="54"
+                  stroke="#deaa00" stroke-opacity="0.65" stroke-width="2" fill="none"/>
+          <!-- Inner dashed ring -->
+          <circle cx="220" cy="220" r="30"
+                  stroke="#deaa00" stroke-opacity="0.75" stroke-width="1.5"
+                  stroke-dasharray="4 5" fill="none"/>
+
+          <!-- ── CORNER ACCENTS: double-square (dark outer, gold inner) ── -->
+          <rect x="44"  y="44"  width="16" height="16" stroke="#0D0D14" stroke-opacity="0.4" stroke-width="1.5" fill="none"/>
+          <rect x="380" y="44"  width="16" height="16" stroke="#0D0D14" stroke-opacity="0.4" stroke-width="1.5" fill="none"/>
+          <rect x="44"  y="380" width="16" height="16" stroke="#0D0D14" stroke-opacity="0.4" stroke-width="1.5" fill="none"/>
+          <rect x="380" y="380" width="16" height="16" stroke="#0D0D14" stroke-opacity="0.4" stroke-width="1.5" fill="none"/>
+          <rect x="49"  y="49"  width="7"  height="7"  stroke="#deaa00" stroke-opacity="0.85" stroke-width="1" fill="none"/>
+          <rect x="384" y="49"  width="7"  height="7"  stroke="#deaa00" stroke-opacity="0.85" stroke-width="1" fill="none"/>
+          <rect x="49"  y="384" width="7"  height="7"  stroke="#deaa00" stroke-opacity="0.85" stroke-width="1" fill="none"/>
+          <rect x="384" y="384" width="7"  height="7"  stroke="#deaa00" stroke-opacity="0.85" stroke-width="1" fill="none"/>
+
+          <!-- ── GOLD: axis–frame intersection dots ── -->
+          <circle cx="220" cy="96"  r="5" fill="#deaa00" opacity="0.85"/>
+          <circle cx="220" cy="344" r="5" fill="#deaa00" opacity="0.85"/>
+          <circle cx="96"  cy="220" r="5" fill="#deaa00" opacity="0.85"/>
+          <circle cx="344" cy="220" r="5" fill="#deaa00" opacity="0.85"/>
+
+          <!-- ── GOLD: axis–ring intersection dots (smaller) ── -->
+          <circle cx="220" cy="166" r="3.5" fill="#deaa00" opacity="0.6"/>
+          <circle cx="220" cy="274" r="3.5" fill="#deaa00" opacity="0.6"/>
+          <circle cx="166" cy="220" r="3.5" fill="#deaa00" opacity="0.6"/>
+          <circle cx="274" cy="220" r="3.5" fill="#deaa00" opacity="0.6"/>
+
+          <!-- ── CENTER dot ── -->
+          <circle cx="220" cy="220" r="11" fill="#deaa00" opacity="1"/>
+          <circle cx="220" cy="220" r="4.5" fill="#ffffff" opacity="0.95"/>
+        </svg>
+      </div>
+    </div>
+
+    <!-- Stats Bar -->
+    <div class="stats-bar">
+      <div class="container stats-bar__inner">
+        <div class="stat">
+          <span class="stat__num">12+</span>
+          <span class="stat__label">Years Experience</span>
+        </div>
+        <div class="stat__divider"></div>
+        <div class="stat">
+          <span class="stat__num">40+</span>
+          <span class="stat__label">Companies Transformed</span>
+        </div>
+        <div class="stat__divider"></div>
+        <div class="stat">
+          <span class="stat__num">2,500+</span>
+          <span class="stat__label">Entrepreneurs Trained</span>
+        </div>
+        <div class="stat__divider"></div>
+        <div class="stat">
+          <span class="stat__num">7</span>
+          <span class="stat__label">Industries</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================
+       SERVICES
+  ========================================= -->
+  <section class="section services" id="services">
+    <div class="container">
+      <div class="section__header reveal">
+        <span class="section__label">What We Offer</span>
+        <h2 class="section__title">How We Work Together</h2>
+        <p class="section__sub">Every business is at a different stage. Pick the format that fits where you are right now.</p>
+      </div>
+      <div class="services__grid">
+
+        <div class="service-card reveal">
+          <div class="service-card__num">01</div>
+          <h3 class="service-card__title">1-on-1 Strategic Consulting</h3>
+          <p class="service-card__desc">Personal work with the business owner. We design your growth strategy, build key systems, and remove what's blocking revenue.</p>
+          <ul class="service-card__list">
+            <li>Custom 90-day growth roadmap</li>
+            <li>Weekly 60-min strategy sessions</li>
+            <li>Direct access between sessions</li>
+          </ul>
+          <div class="service-card__footer">
+            <span class="service-card__price">From $3,000</span>
+            <a href="#contact" class="btn btn--outline">Request a Meeting</a>
+          </div>
+        </div>
+
+        <div class="service-card service-card--featured reveal">
+          <div class="service-card__badge">Most Popular</div>
+          <div class="service-card__num">02</div>
+          <h3 class="service-card__title">VIP Business Partnership</h3>
+          <p class="service-card__desc">Exclusive strategic co-management. I work as your fractional Chief Strategy Officer — with full accountability for outcomes.</p>
+          <ul class="service-card__list">
+            <li>Everything in Personal Consulting</li>
+            <li>On-site presence 2 days/month</li>
+            <li>Access to my operator network</li>
+          </ul>
+          <div class="service-card__footer">
+            <span class="service-card__price">From $15,000/mo</span>
+            <a href="#contact" class="btn btn--primary">Discuss Details</a>
+          </div>
+        </div>
+
+        <div class="service-card reveal">
+          <div class="service-card__num">03</div>
+          <h3 class="service-card__title">Corporate Team Training</h3>
+          <p class="service-card__desc">One-time or recurring workshops for leadership teams. Real frameworks, not motivational fluff.</p>
+          <ul class="service-card__list">
+            <li>Sales growth &amp; pipeline systems</li>
+            <li>Leadership &amp; delegation</li>
+            <li>Hiring high-performers</li>
+          </ul>
+          <div class="service-card__footer">
+            <span class="service-card__price">From $5,000</span>
+            <a href="#contact" class="btn btn--outline">Request a Workshop</a>
+          </div>
+        </div>
+
+        <div class="service-card reveal">
+          <div class="service-card__num">04</div>
+          <h3 class="service-card__title">Founders Mastermind</h3>
+          <p class="service-card__desc">A closed group of 8–12 non-competing founders. Monthly deep-dives, peer accountability, proven playbooks.</p>
+          <ul class="service-card__list">
+            <li>2× monthly group sessions (3h)</li>
+            <li>Private community access</li>
+            <li>Monthly guest expert</li>
+          </ul>
+          <div class="service-card__footer">
+            <span class="service-card__price">$1,500/month</span>
+            <a href="#contact" class="btn btn--outline">Apply for a Spot</a>
+          </div>
+        </div>
+
+        <div class="service-card reveal">
+          <div class="service-card__num">05</div>
+          <h3 class="service-card__title">Online Courses</h3>
+          <p class="service-card__desc">Structured knowledge for founders who want to move fast without paying consulting rates.</p>
+          <ul class="service-card__list">
+            <li>CEO Foundations — $199</li>
+            <li>Sales Machine — $299</li>
+            <li>Hiring Right — $149</li>
+          </ul>
+          <div class="service-card__footer">
+            <span class="service-card__price">From $149</span>
+            <a href="#contact" class="btn btn--outline">Browse Courses</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================
+       CASES
+  ========================================= -->
+  <section class="section cases" id="cases">
+    <div class="container">
+      <div class="section__header reveal">
+        <span class="section__label">Proof of Work</span>
+        <h2 class="section__title">Real Work. Real Results.</h2>
+        <p class="section__sub">Every number below represents a founder who was stuck — and isn't anymore.</p>
+      </div>
+      <div class="cases__grid">
+
+        <div class="case-card reveal">
+          <div class="case-card__header">
+            <div class="case-card__meta">
+              <span class="case-card__tag">Healthcare</span>
+              <span class="case-card__period">Aug 2023 – Present</span>
+            </div>
+            <h3 class="case-card__company">Meridian Health Group</h3>
+            <p class="case-card__role">Strategic Consultant</p>
+          </div>
+          <p class="case-card__context">A regional network of 6 clinics with strong foot traffic but stagnant revenue. More patients weren't translating into more profit.</p>
+          <div class="case-card__results">
+            <div class="result">
+              <span class="result__num">+39%</span>
+              <span class="result__label">Procedures growth</span>
+            </div>
+            <div class="result">
+              <span class="result__num">+19%</span>
+              <span class="result__label">Call → booking rate</span>
+            </div>
+            <div class="result">
+              <span class="result__num">93</span>
+              <span class="result__label">NPS score</span>
+            </div>
+            <div class="result">
+              <span class="result__num">2×</span>
+              <span class="result__label">Revenue in 22 months</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="case-card reveal">
+          <div class="case-card__header">
+            <div class="case-card__meta">
+              <span class="case-card__tag">Technology</span>
+              <span class="case-card__period">Nov 2021 – Sep 2023</span>
+            </div>
+            <h3 class="case-card__company">QuickDoc Platform</h3>
+            <p class="case-card__role">CEO / Interim Executive</p>
+          </div>
+          <p class="case-card__context">Early-stage doctor-review platform with product-market fit but no growth engine. Needed someone to build the business layer.</p>
+          <div class="case-card__results">
+            <div class="result">
+              <span class="result__num">10×</span>
+              <span class="result__label">Revenue growth</span>
+            </div>
+            <div class="result">
+              <span class="result__num">500K</span>
+              <span class="result__label">Monthly active users</span>
+            </div>
+            <div class="result">
+              <span class="result__num">+1,200</span>
+              <span class="result__label">Partner clinics</span>
+            </div>
+            <div class="result">
+              <span class="result__num">+20K</span>
+              <span class="result__label">New reviews/month</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="case-card reveal">
+          <div class="case-card__header">
+            <div class="case-card__meta">
+              <span class="case-card__tag">Retail</span>
+              <span class="case-card__period">Jan 2022 – Dec 2022</span>
+            </div>
+            <h3 class="case-card__company">Vero Fashion Group</h3>
+            <p class="case-card__role">Growth Consultant</p>
+          </div>
+          <p class="case-card__context">8-location fashion chain with a broken unit economics model. Despite high traffic, margins were collapsing year over year.</p>
+          <div class="case-card__results">
+            <div class="result">
+              <span class="result__num">+12pp</span>
+              <span class="result__label">Margin improvement</span>
+            </div>
+            <div class="result">
+              <span class="result__num">–34%</span>
+              <span class="result__label">Dead stock reduction</span>
+            </div>
+            <div class="result">
+              <span class="result__num">+41%</span>
+              <span class="result__label">Revenue per sq. m</span>
+            </div>
+            <div class="result">
+              <span class="result__num">✓</span>
+              <span class="result__label">Back to profitability</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================
+       ABOUT
+  ========================================= -->
+  <section class="section about" id="about">
+    <div class="container about__inner">
+      <div class="about__left reveal">
+        <div class="about__photo">
+          <div class="about__initials">PD</div>
+        </div>
+        <div class="about__tags">
+          <span class="tag">Healthcare</span>
+          <span class="tag">Technology</span>
+          <span class="tag">Retail</span>
+          <span class="tag">Real Estate</span>
+          <span class="tag">Hospitality</span>
+          <span class="tag">Education</span>
+          <span class="tag">Professional Services</span>
+        </div>
+      </div>
+      <div class="about__content reveal">
+        <span class="section__label">Who I Am</span>
+        <h2 class="about__title">I didn't start as a consultant.<br>I started as a founder who made every mistake.</h2>
+        <p class="about__text">Proper Develop is a business strategy firm with 12 years of experience building, fixing, and scaling companies across healthcare, technology, retail, and real estate.</p>
+        <p class="about__text">Our work sits at the intersection of strategy, systems, and human performance — because a great plan without the right team is just a document.</p>
+        <ul class="about__creds">
+          <li><span class="cred__dot"></span>12 years building and advising across 7 industries</li>
+          <li><span class="cred__dot"></span>Former CEO of a platform that grew from 50K to 500K monthly users</li>
+          <li><span class="cred__dot"></span>Trained 2,500+ founders and executives in live programs</li>
+          <li><span class="cred__dot"></span>Executive education in the US and Singapore</li>
+          <li><span class="cred__dot"></span>Keynote speaker at 12+ regional business conferences</li>
+        </ul>
+        <a href="#contact" class="btn btn--primary">Work With Me</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================
+       TESTIMONIALS
+  ========================================= -->
+  <section class="section testimonials" id="testimonials">
+    <div class="container">
+      <div class="section__header reveal">
+        <span class="section__label">Client Feedback</span>
+        <h2 class="section__title">What Clients Say</h2>
+      </div>
+
+      <blockquote class="testimonial__featured reveal">
+        "He doesn't just give advice.<br>He builds the thing with you."
+        <cite>— Rachel B., CEO of NorthBridge Logistics</cite>
+      </blockquote>
+
+      <div class="testimonials__grid">
+        <div class="testimonial-card reveal">
+          <div class="t-stars">★★★★★</div>
+          <p class="t-quote">"Before working with Marcus, we had revenue but no clarity. Three months in, we had a strategy, a dashboard, and a team that finally understood what winning looked like. We grew 40% that year."</p>
+          <div class="t-author">
+            <div class="t-avatar">JR</div>
+            <div>
+              <div class="t-name">James R.</div>
+              <div class="t-role">CEO, Meridian Health Group</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card reveal">
+          <div class="t-stars">★★★★★</div>
+          <p class="t-quote">"I'd worked with consultants before. Most give you a deck and disappear. Marcus gets into the business, spots the real problem — not the surface one — and stays until it's fixed. That's rare."</p>
+          <div class="t-author">
+            <div class="t-avatar">SL</div>
+            <div>
+              <div class="t-name">Sofia L.</div>
+              <div class="t-role">Founder, QuickDoc Platform</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card reveal">
+          <div class="t-stars">★★★★★</div>
+          <p class="t-quote">"Our team went through the workshop in October. By January, our sales cycle shortened by 3 weeks and two underperforming managers became our top closers. I don't fully understand how, but it worked."</p>
+          <div class="t-author">
+            <div class="t-avatar">DK</div>
+            <div>
+              <div class="t-name">David K.</div>
+              <div class="t-role">Commercial Director, Vero Fashion</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card reveal">
+          <div class="t-stars">★★★★★</div>
+          <p class="t-quote">"The Mastermind alone was worth 10× what I paid. Eight founders, no competitors in the room, real conversations about real problems. I solved a hiring crisis in week two from the group's input."</p>
+          <div class="t-author">
+            <div class="t-avatar">NM</div>
+            <div>
+              <div class="t-name">Natalie M.</div>
+              <div class="t-role">Co-Founder, Apex Digital Studio</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================
+       CONTACT
+  ========================================= -->
+  <section class="section contact" id="contact">
+    <div class="container contact__inner">
+      <div class="contact__info reveal">
+        <span class="section__label">Get Started</span>
+        <h2 class="contact__title">Let's Find the Right Format for You</h2>
+        <p class="contact__sub">Fill out the form and we'll reach out within 24 hours. No pitch — just a conversation about where your business is stuck.</p>
+        <ul class="contact__bullets">
+          <li>
+            <span class="check">✓</span>
+            No commitment on the first call
+          </li>
+          <li>
+            <span class="check">✓</span>
+            We'll be honest if we're not the right fit
+          </li>
+          <li>
+            <span class="check">✓</span>
+            Response within 4 hours on business days
+          </li>
+        </ul>
+        <div class="contact__socials">
+          <a href="#" class="social-pill">Instagram</a>
+          <a href="#" class="social-pill">LinkedIn</a>
+          <a href="#" class="social-pill">WhatsApp</a>
+        </div>
+      </div>
+
+      <div class="contact__form-wrap reveal">
+        <form class="contact__form" id="contactForm" novalidate>
+          <div class="form-group">
+            <label class="form-label" for="name">Your Name</label>
+            <input id="name" type="text" class="form-input" placeholder="John Smith" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="phone">Phone / WhatsApp</label>
+            <input id="phone" type="tel" class="form-input" placeholder="+1 (555) 000-0000" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="format">What format interests you?</label>
+            <select id="format" class="form-input form-select" required>
+              <option value="" disabled selected>Choose an option</option>
+              <option>Online Courses</option>
+              <option>Mastermind Group</option>
+              <option>Corporate Workshop</option>
+              <option>1-on-1 Consulting</option>
+              <option>VIP Partnership</option>
+              <option>Not sure yet — just exploring</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="revenue">Monthly Revenue <span class="form-optional">(optional)</span></label>
+            <select id="revenue" class="form-input form-select">
+              <option value="" disabled selected>Select range</option>
+              <option>Pre-revenue / early stage</option>
+              <option>Under $100K/year</option>
+              <option>$100K – $500K/year</option>
+              <option>$500K – $2M/year</option>
+              <option>$2M – $10M/year</option>
+              <option>$10M+/year</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn--primary btn--full" id="submitBtn">
+            Get in Touch →
+          </button>
+          <p class="form-note">By submitting you agree to our Privacy Policy. No spam, ever.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================
+       FOOTER
+  ========================================= -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <div class="footer__logo">Proper<span>Develop</span></div>
+        <p class="footer__tagline">Building businesses that outlast their founders.</p>
+        <div class="footer__socials">
+          <a href="#" class="footer__social-btn">in</a>
+          <a href="#" class="footer__social-btn">ig</a>
+          <a href="#" class="footer__social-btn">yt</a>
+        </div>
+      </div>
+      <div class="footer__col">
+        <h4 class="footer__heading">Navigation</h4>
+        <ul class="footer__links">
+          <li><a href="#services">Services</a></li>
+          <li><a href="#cases">Cases</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4 class="footer__heading">Services</h4>
+        <ul class="footer__links">
+          <li><a href="#contact">1-on-1 Consulting</a></li>
+          <li><a href="#contact">VIP Partnership</a></li>
+          <li><a href="#contact">Corporate Training</a></li>
+          <li><a href="#contact">Mastermind Group</a></li>
+          <li><a href="#contact">Online Courses</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4 class="footer__heading">Contact</h4>
+        <ul class="footer__links footer__links--info">
+          <li>hello@properdevelop.com</li>
+          <li>+1 (555) 000-0000</li>
+          <li>New York, USA</li>
+          <li class="footer__response">Response within 24h</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div class="container footer__bottom-inner">
+        <span>© 2025 Proper Develop. All rights reserved.</span>
+        <div class="footer__legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Use</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
