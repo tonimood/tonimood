@@ -114,7 +114,7 @@ if (form) {
     submitBtn.disabled      = true;
     submitBtn.style.opacity = '0.7';
 
-    const SHEET_URL = 'https://script.google.com/macros/s/AKfycbywBZ6mBpKyzbWh4vrBug0bUVRDLHSDdZN-LTgP4OU_qV7iNX3XNuQC-miPzMoLF07vaw/exec';
+    const SHEET_URL = 'https://script.google.com/macros/s/AKfycbw7qxs9M9sseKhz6wlLwTcf2XvkQU4bTOiXd3ChxgdHgLsb_qyTRmnKTEKF3mxSW4yjcg/exec';
 
     fetch(SHEET_URL, {
       method: 'POST',
