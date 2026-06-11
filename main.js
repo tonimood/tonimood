@@ -157,6 +157,8 @@ shakeStyle.textContent = `
 `;
 document.head.appendChild(shakeStyle);
 
+document.getElementById('copy-year').textContent = new Date().getFullYear();
+
 /* =============================================
    STAT COUNT-UP ANIMATION
 ============================================= */
