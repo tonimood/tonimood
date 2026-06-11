@@ -100,9 +100,10 @@ if (form) {
     e.preventDefault();
 
     // Basic validation
-    const name   = form.querySelector('#name').value.trim();
-    const phone  = form.querySelector('#phone').value.trim();
-    const format = form.querySelector('#format').value;
+    const name    = form.querySelector('#name').value.trim();
+    const phone   = form.querySelector('#phone').value.trim();
+    const format  = form.querySelector('#format').value;
+    const revenue = form.querySelector('#revenue').value;
 
     if (!name || !phone || !format) {
       shake(submitBtn);
@@ -119,7 +120,7 @@ if (form) {
       method: 'POST',
       mode:   'no-cors',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ name, phone, format })
+      body: JSON.stringify({ name, phone, format, revenue })
     })
     .then(() => {
       submitBtn.textContent       = 'Message Sent ✓';
