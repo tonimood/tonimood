@@ -109,19 +109,31 @@ if (form) {
       return;
     }
 
-    submitBtn.textContent = 'Sending…';
-    submitBtn.disabled    = true;
+    submitBtn.textContent   = 'Sending…';
+    submitBtn.disabled      = true;
     submitBtn.style.opacity = '0.7';
 
-    // Simulate async submission
-    setTimeout(() => {
-      submitBtn.textContent      = 'Message Sent ✓';
-      submitBtn.style.opacity    = '1';
-      submitBtn.style.background = '#22C55E';
+    const SHEET_URL = 'https://script.google.com/macros/s/AKfycbywBZ6mBpKyzbWh4vrBug0bUVRDLHSDdZN-LTgP4OU_qV7iNX3XNuQC-miPzMoLF07vaw/exec';
+
+    fetch(SHEET_URL, {
+      method: 'POST',
+      mode:   'no-cors',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ name, phone, format })
+    })
+    .then(() => {
+      submitBtn.textContent       = 'Message Sent ✓';
+      submitBtn.style.opacity     = '1';
+      submitBtn.style.background  = '#22C55E';
       submitBtn.style.borderColor = '#22C55E';
-      submitBtn.style.color      = '#fff';
+      submitBtn.style.color       = '#fff';
       form.reset();
-    }, 1000);
+    })
+    .catch(() => {
+      submitBtn.textContent       = 'Error — try again';
+      submitBtn.disabled          = false;
+      submitBtn.style.opacity     = '1';
+    });
   });
 }
 
