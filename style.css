@@ -445,10 +445,10 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   text-align: center;
 }
 .stat__num {
-  font-size: 34px;
+  font-size: 20px;
   font-weight: 800;
   color: var(--gold);
-  letter-spacing: -0.04em;
+  letter-spacing: -0.01em;
   line-height: 1;
   margin-bottom: 5px;
 }
@@ -659,12 +659,13 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 }
 .result__num {
   display: block;
-  font-size: 28px;
+  font-size: 16px;
   font-weight: 800;
   color: var(--gold);
-  letter-spacing: -0.035em;
+  letter-spacing: 0.01em;
   line-height: 1;
   margin-bottom: 4px;
+  text-transform: uppercase;
 }
 .result__label {
   display: block;
