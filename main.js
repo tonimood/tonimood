@@ -100,10 +100,12 @@ if (form) {
     e.preventDefault();
 
     // Basic validation
-    const name    = form.querySelector('#name').value.trim();
-    const phone   = form.querySelector('#phone').value.trim();
-    const format  = form.querySelector('#format').value;
-    const revenue = form.querySelector('#revenue').value;
+    const name      = form.querySelector('#name').value.trim();
+    const phoneCode = form.querySelector('#phoneCode').value;
+    const phoneNum  = form.querySelector('#phone').value.trim();
+    const phone     = phoneNum ? phoneCode + ' ' + phoneNum : '';
+    const format    = form.querySelector('#format').value;
+    const revenue   = form.querySelector('#revenue').value;
 
     if (!name || !phone || !format) {
       shake(submitBtn);

@@ -1004,6 +1004,51 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   color: var(--text-1);
 }
 
+/* Phone input with country code */
+.phone-input-group {
+  display: flex;
+  background: var(--card-2);
+  border: 1.5px solid var(--border);
+  border-radius: var(--r-sm);
+  overflow: hidden;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.phone-input-group:focus-within {
+  border-color: var(--gold);
+  box-shadow: 0 0 0 3px var(--gold-dim);
+}
+.phone-code-select {
+  background: transparent;
+  border: none;
+  border-right: 1.5px solid var(--border);
+  padding: 12px 6px 12px 12px;
+  font-size: 13px;
+  color: var(--text-1);
+  font-family: inherit;
+  outline: none;
+  cursor: pointer;
+  flex-shrink: 0;
+  appearance: none;
+  -webkit-appearance: none;
+  width: 88px;
+}
+.phone-code-select option {
+  background: var(--card-2);
+  color: var(--text-1);
+}
+.phone-number-input {
+  background: transparent;
+  border: none;
+  padding: 12px 16px;
+  font-size: 14px;
+  color: var(--text-1);
+  font-family: inherit;
+  outline: none;
+  flex: 1;
+  min-width: 0;
+}
+.phone-number-input::placeholder { color: var(--text-3); }
+
 .form-note {
   font-size: 12px;
   color: var(--text-3);
